@@ -1,6 +1,6 @@
 let i = 0;
 let j = 0;
-let txt = ['full stack development','web design','3D animation','videography','product photography'];
+let txt = ['web development','graphic design','3D animation','videography','photography'];
 let speed = 80;
 let heading = document.querySelector('#typewriterText');
 
