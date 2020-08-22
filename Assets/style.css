@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: rgba(210,255,255,0.1);
+}
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+    overflow: hidden;
+    background: rgb(7,54,70);
+    background: linear-gradient(0deg, rgba(7,54,70,1) 0%, rgba(42,78,92,1) 100%);
+}
+section.title {
+    width: 100%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px 40px 40px;
+}
+.wrapper h1, .wrapper h2 {
+    color: #D2D8DB;
+    z-index: 1;
+}
+.wrapper h1 {
+    font-size: 9rem;
+}
+.wrapper h2 {
+    font-size: 5rem;
+}
+.wrapper h2 strong {
+    color: yellow;
+}
+.wrapper h3 {
+    font-size: 3rem;
+    color: #16404f;
+    font-family: consolas;
+    letter-spacing: 5px;
+    margin: 0;
+}
+.inputField {
+    background: #B8C3C7;
+    border: 4px solid #a3b5bb;
+    border-radius: 5px;
+    padding: 5px 15px;
+    width: 100%;
+    z-index: 1;
+}
+.box div {
+    position: absolute;
+    background-color: transparent;
+    color: rgba(62,125,152,0.4);
+    font-size: 6rem;
+    font-family: consolas;
+    width: 100%;
+}
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: bg 10s linear infinite;
+}
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: bg 7s linear infinite;
+}
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: bg 9s linear infinite;
+}
+.box div:nth-child(4) {
+    top: 46%;
+    left: 60%;
+    animation: bg 10s linear infinite;
+}
+.box div:nth-child(5) {
+    top: 60%;
+    left: 10%;
+    animation: bg 6s linear infinite;
+}
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: bg 12s linear infinite;
+}
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: bg 15s linear infinite;
+}
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: bg 16s linear infinite;
+}
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: bg 9s linear infinite;
+}
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: bg 5s linear infinite;
+}
+
+#typewriterText {
+    overflow: hidden;
+    position: relative;
+    border-right: 4px solid #16404f;
+    white-space: nowrap;
+
+    animation: textCursor 800ms steps(18) infinite normal;
+}
+
+@keyframes textCursor {
+    from {
+        border-right-color: #16404f;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes bg {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity 1; 
+    }
+    100% {
+        transform: scale(1.3) translate(-90px, -20px);
+        opacity: 0;
+    }
+}
