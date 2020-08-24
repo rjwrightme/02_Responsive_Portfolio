@@ -28,7 +28,6 @@ h1, h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    max-height: 700px;
     overflow: hidden;
     background: rgb(0,46,61);
     background: linear-gradient(0deg, rgba(0,46,61,1) 0%, rgba(6,79,107,1) 100%);
@@ -60,6 +59,9 @@ section.title {
 .wrapper h3 {
     font-size: 3rem;
 }
+.wrapper p {
+    margin: 0;
+}
 .inputField {
     background: #B8C3C7;
     border: 4px solid #a3b5bb;
@@ -67,10 +69,16 @@ section.title {
     padding: 5px 15px;
     width: 100%;
     z-index: 1;
-    height: 70px;
-    max-width: 500px;
+    max-width: 900px;
 }   
-
+#scrollDown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    margin-left: -35px;
+    animation: scroll 2s infinite normal;
+}
 .box div {
     position: absolute;
     background-color: transparent;
@@ -139,10 +147,10 @@ section.title {
     color: #16404f;
     font-family: consolas;
     letter-spacing: 5px;
-    line-height: 56px;
+    line-height: 1.5em;
     margin: 0;
     width: fit-content;
-    animation: textCursor 800ms steps(18) infinite normal;
+    animation: textCursor 800ms steps(18) infinite ease-in;
 }
 
 article.container {
@@ -192,6 +200,23 @@ input[type=text], textarea {
     }
     100% {
         transform: scale(1.3) translate(-90px, -20px);
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
         opacity: 0;
     }
 }
