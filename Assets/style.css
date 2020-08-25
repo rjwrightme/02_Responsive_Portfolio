@@ -6,10 +6,11 @@ body {
 }
 h1, h2 {
     font-family: 'Ubuntu Mono', monospace;
-    color: #cc3e3e;
+    color: #4f6a73;
 }
 .navbar {
     background-color: #03435a;
+    z-index: 100;
 }
 .navbar-dark .navbar-toggler {
     border: none;
@@ -25,10 +26,8 @@ h1, h2 {
     color: #196a8a;
 }
 .wrapper {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
     background: rgb(0,46,61);
     background: linear-gradient(0deg, rgba(0,46,61,1) 0%, rgba(6,79,107,1) 100%);
 }
@@ -48,10 +47,11 @@ section.title {
 }
 .wrapper h1 {
     font-size: calc(700% + 1vw*5);
+    margin-top: -15%;
 }
 .wrapper h2 {
     font-size: calc(400% + 1vw*3);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .wrapper h2 strong {
     color: #da5b5b;
@@ -73,13 +73,20 @@ section.title {
 }   
 #scrollDown {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 50%;
-    width: 70px;
-    margin-left: -35px;
+    width: 50px;
+    margin-left: -25px;
     animation: scroll 2s infinite normal;
 }
-.box div {
+.codeBG {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.codeBG div {
     position: absolute;
     background-color: transparent;
     color: rgba(62,125,152,0.4);
@@ -87,52 +94,52 @@ section.title {
     font-family: consolas;
     width: 100%;
 }
-.box div:nth-child(1) {
+.codeBG div:nth-child(1) {
     top: 12%;
     left: 42%;
     animation: bg 10s linear infinite;
 }
-.box div:nth-child(2) {
+.codeBG div:nth-child(2) {
     top: 70%;
     left: 50%;
     animation: bg 7s linear infinite;
 }
-.box div:nth-child(3) {
+.codeBG div:nth-child(3) {
     top: 17%;
     left: 6%;
     animation: bg 9s linear infinite;
 }
-.box div:nth-child(4) {
+.codeBG div:nth-child(4) {
     top: 46%;
     left: 60%;
     animation: bg 10s linear infinite;
 }
-.box div:nth-child(5) {
+.codeBG div:nth-child(5) {
     top: 60%;
     left: 10%;
     animation: bg 6s linear infinite;
 }
-.box div:nth-child(6) {
+.codeBG div:nth-child(6) {
     top: 80%;
     left: 70%;
     animation: bg 12s linear infinite;
 }
-.box div:nth-child(7) {
+.codeBG div:nth-child(7) {
     top: 60%;
     left: 80%;
     animation: bg 15s linear infinite;
 }
-.box div:nth-child(8) {
+.codeBG div:nth-child(8) {
     top: 32%;
     left: 25%;
     animation: bg 16s linear infinite;
 }
-.box div:nth-child(9) {
+.codeBG div:nth-child(9) {
     top: 90%;
     left: 25%;
     animation: bg 9s linear infinite;
 }
-.box div:nth-child(10) {
+.codeBG div:nth-child(10) {
     top: 20%;
     left: 80%;
     animation: bg 5s linear infinite;
@@ -153,6 +160,26 @@ section.title {
     animation: textCursor 800ms steps(18) infinite ease-in;
 }
 
+#aboutMe {
+    padding: 15px;
+}
+#aboutMe .row {
+    align-items: center;
+}
+#aboutMe img {
+    width: 100%;
+    padding: 8%;
+}
+#aboutMe #profilePic {
+    width: 70%;
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 5px auto;
+    display: block;
+}
+#aboutMe p {
+    max-width: 500px;
+}
 article.container {
     margin-top: 20px;
 }
@@ -181,6 +208,16 @@ input[type=text], textarea {
     background-color: #5fbf78;
     color: #fff;
     border-color: #5da06e;
+}
+
+#portfolioList img {
+    width: 100%;
+}
+#portfolioList section {
+    padding: 20px;
+}
+#portfolioList section:nth-child(even) {
+    background-color: #e6e6e6;
 }
 
 /* Animations */
