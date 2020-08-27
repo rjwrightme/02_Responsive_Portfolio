@@ -214,7 +214,7 @@ input[type=text], textarea {
     width: 100%;
 }
 #portfolioList section {
-    padding: 20px;
+    padding: 20px 0;
 }
 #portfolioList section:nth-child(even) {
     background-color: #e6e6e6;
